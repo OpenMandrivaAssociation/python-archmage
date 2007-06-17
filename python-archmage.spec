@@ -1,6 +1,6 @@
 %define realname	archmage
 %define name		python-%{realname}
-%define version 0.0.8
+%define version 0.1.9beta1
 %define release %mkrel 1
 
 Summary: CHM(Compiled HTML) Decompressor
@@ -29,11 +29,11 @@ env CFLAGS="$RPM_OPT_FLAGS" python setup.py build
 %install
 python setup.py install --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES
 
+# compressing manpages in bz2 changes the name
+perl -pi -e "s#1.gz#1.bz2#g" INSTALLED_FILES
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files -f INSTALLED_FILES
 %defattr(-,root,root)
-#config(noreplace)%{_sysconfdir}/arch.conf
-
-
