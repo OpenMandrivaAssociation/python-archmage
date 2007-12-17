@@ -11,7 +11,6 @@ Source0: %{realname}-%{version}.tar.bz2
 License: GPL
 Group: Development/Python
 BuildRequires:	python-devel
-BuildRoot: %{_tmppath}/%{name}-buildroot
 Prefix: %{_prefix}
 Url: http://archmage.sf.net/
 
