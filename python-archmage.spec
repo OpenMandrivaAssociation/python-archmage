@@ -5,6 +5,7 @@
 
 Summary: CHM(Compiled HTML) Decompressor
 Name: %{name}
+Epoch: 1
 Version: %{version}
 Release: %{release}
 Source0: %{realname}-%{version}.tar.bz2
