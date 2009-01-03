@@ -12,7 +12,6 @@ License: GPL
 Group: Development/Python
 BuildRequires:	python-devel
 BuildRoot: %{_tmppath}/%{name}-buildroot
-Prefix: %{_prefix}
 Url: http://archmage.sf.net/
 
 %description
@@ -27,13 +26,16 @@ arCHMage is based on chmlib by Jed Wing and is written in python
 env CFLAGS="$RPM_OPT_FLAGS" python setup.py build
 
 %install
-python setup.py install --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES
-
-# compressing manpages in bz2 changes the name
-perl -pi -e "s#1.gz#1.bz2#g" INSTALLED_FILES
+python setup.py install --root=$RPM_BUILD_ROOT 
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f INSTALLED_FILES
+%files
 %defattr(-,root,root)
+%config %{_sysconfdir}/archmage/arch.conf
+%{_bindir}/*
+%{python_sitelib}/*.egg-info
+%{python_sitelib}/archmod
+%{_datadir}/archmage
+%{_mandir}/man1/*
