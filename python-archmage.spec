@@ -1,7 +1,7 @@
 %define realname	archmage
 %define name		python-%{realname}
 %define version 0.2.4
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: CHM(Compiled HTML) Decompressor
 Name: %{name}
