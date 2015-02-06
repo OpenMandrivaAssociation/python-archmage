@@ -5,7 +5,7 @@ Summary: CHM(Compiled HTML) Decompressor
 Name:    python-%{realname}
 Epoch:   1
 Version: 0.2.4
-Release: 3
+Release: 4
 Source0: %{realname}-%{version}.tar.bz2
 License: GPL
 Group:   Development/Python
