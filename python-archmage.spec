@@ -11,6 +11,7 @@ License: GPL
 Group:   Development/Python
 Url:     https://github.com/dottedmag/archmage
 BuildRequires:	python-devel
+BuildRequires:  python3dist(setuptools)
 
 %description
 arCHMage - extensible reader/decompiler of files in CHM format 
