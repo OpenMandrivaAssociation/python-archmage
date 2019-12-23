@@ -28,9 +28,6 @@ env CFLAGS="%{optflags}" python setup.py build
 python setup.py install --root=%{buildroot}
 
 %files
-#config %{_sysconfdir}/archmage/arch.conf
 %{_bindir}/*
 %{python_sitelib}/*.egg-info
-#{python_sitelib}/archmod
-#{_datadir}/archmage
-#{_mandir}/man1/*
+%{python3_sitelib}/archmage/
