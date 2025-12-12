@@ -5,7 +5,7 @@ Summary: CHM(Compiled HTML) Decompressor
 Name:    python-%{realname}
 Epoch:   1
 Version: 0.4.2.1
-Release: 1
+Release: 2
 Source0: https://files.pythonhosted.org/packages/source/a/archmage/archmage-%{version}.tar.gz
 License: GPL
 Group:   Development/Python
